@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: customer_stg
+    description: This table selects all data untransformed from the customers source data.
+    columns:
+      - name: id
+        description: The unigue customer number.
+      - name: first_name
+      - name: last_name
+sources:
+    - name: jaffle_shop
+      database: raw
+      schema: jaffle_shop
+      tables:
+        - name: customers
+        - name: orders
