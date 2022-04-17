@@ -5,8 +5,9 @@ models:
     description: This table selects all data untransformed from the customers source data.
     columns:
       - name: id
-        description: The unigue customer number.
+        description: The unique customer number.
       - name: first_name
+        description: test description.
       - name: last_name
 sources:
     - name: jaffle_shop
