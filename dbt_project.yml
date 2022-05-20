@@ -35,6 +35,6 @@ models:
   jaffle_shop:
   
     staging:
-      +database: "{{ 'staging' if target.name == 'prod' else '' }}development"
+      +database: "{{ 'development' if target.name == 'prod' else '' }}staging"
       +schema: staging
    
