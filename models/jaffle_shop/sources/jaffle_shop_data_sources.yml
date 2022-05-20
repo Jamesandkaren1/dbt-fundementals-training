@@ -16,3 +16,9 @@ sources:
       tables:
         - name: customers
         - name: orders
+        
+    - name: s3_download
+      database: staging
+      schema: s3
+      tables:
+        - name: json_table

@@ -1,0 +1,17 @@
+version: 2
+sources:
+  - name: S3_DOWNLOAD
+    database: STAGING
+    schema: S3
+    loader: S3
+    tables:
+      - name: json_table
+          #ext_full_refresh: true
+          #description: > a json s3 load experiment
+        external:
+          location: "@STAGING.S3.S3_DOWNLOAD" ##reference an existing external stage 
+          file_format: "( type = json )"
+          auto_refresh: true 
+        columns:
+         - name: json_1 ## you can input any name
+           data_type: varchar ## best to use varchar for all

@@ -7,6 +7,15 @@ WITH order_fact AS (
         NULL AS order_amount
 
     FROM {{ref('orders_stg')}}
+    
 )
 
-SELECT * FROM order_fact
+SELECT 
+    order_fact.order_date,
+    order_fact.order_id,
+    order_fact.customer_id,
+    order_dim.order_status
+
+
+FROM order_fact as order_fact
+left join {{'order_dim'}} as order_dim on order_dim.order_id = order_fact.order_id
