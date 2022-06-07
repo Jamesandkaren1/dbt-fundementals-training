@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: FIXER_API
+    database: FIVETRAN_DATABASE
+    schema: AWS_LAMBDA
+    loaded_at_field: _FIVETRAN_SYNCED
+    tables: 
+      - name: FOREX
