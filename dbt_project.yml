@@ -37,5 +37,5 @@ models:
   
     staging:
       +database: "{{ env_var('DBT_STAGING') }}"
-      +schema: staging
+      +schema: staging   
    
